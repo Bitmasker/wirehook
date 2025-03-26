@@ -130,11 +130,16 @@ export default function Page({ params }: { params: Promise<{ id: string }> }) {
                             "application/json"
                           ) ? (
                             <pre className="whitespace-pre-wrap">
-                              {JSON.stringify(
-                                JSON.parse(selected.body),
-                                null,
-                                2
-                              )}
+                              {(() => {
+                                let parsedBody;
+                                try {
+                                  parsedBody = JSON.parse(selected.body);
+                                } catch (e) {
+                                  console.log(e);
+                                  parsedBody = !!selected.body ? selected.body : undefined;
+                                }
+                                return JSON.stringify(parsedBody, null, 2);
+                              })()}
                             </pre>
                           ) : (
                             <pre className="whitespace-pre-wrap">

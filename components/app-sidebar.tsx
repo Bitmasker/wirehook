@@ -81,7 +81,7 @@ export function AppSidebar({
 			{...props}
 		>
 			<Sidebar collapsible="none" className="hidden flex-1 md:flex">
-				<SidebarHeader className="gap-3.5 p-4">
+				<SidebarHeader className="gap-2.5 p-4">
 					<div className="flex w-full items-center justify-between">
 						<Link href="/">
 							<div className="text-base font-semibold text-foreground tracking-normal">
@@ -95,6 +95,7 @@ export function AppSidebar({
 							<FaGithub className="w-5 h-5" />
 						</Link>
 					</div>
+					<div className="text-xs">My version</div>
 					{/* <SidebarInput placeholder="Search..." /> */}
 					<span className="text-xs font-semibold mt-4 pb-2 border-b">
 						REQUESTS ({totalRequests})

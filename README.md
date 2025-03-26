@@ -49,6 +49,20 @@ An open-source, stateless, and hassle-free webhook tester. Designed to be **easy
 
 4. Open your browser and navigate to [http://localhost:3000](http://localhost:3000).
 
+### Build your own Docker
+
+1. Build the Docker image:
+   ```bash
+   sudo docker build -t yourname/wirehook .
+   ```
+
+2. Run the container:
+   ```bash
+   sudo docker run -d -p 3333:3000 yourname/wirehook
+   ```
+
+3. Access the application in your browser at [http://localhost:3333](http://localhost:3333).
+
 ## Usage
 
 1. Point your webhook to the generated endpoint provided by the app.
